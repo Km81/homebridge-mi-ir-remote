@@ -23,16 +23,16 @@ function checkPlatformConfig(homebridge, platform) {
 }
 
 module.exports = function(homebridge) {
-  if (!checkPlatformConfig(homebridge, "ChuangmiIRPlatform")) {
+  if (!checkPlatformConfig(homebridge, "ChuangmiIRPlatform1")) {
     return;
   }
 
   HomebridgeAPI = homebridge;
 
-  HomebridgeAPI.registerPlatform("homebridge-mi-ir-remote", "ChuangmiIRPlatform", ChuangmiIRPlatform, true);
+  HomebridgeAPI.registerPlatform("homebridge-mi-ir-remote", "ChuangmiIRPlatform1", ChuangmiIRPlatform1, true);
 };
 
-class ChuangmiIRPlatform {
+class ChuangmiIRPlatform1 {
   constructor(log, config, api) {
     if (config == null) {
       return;
